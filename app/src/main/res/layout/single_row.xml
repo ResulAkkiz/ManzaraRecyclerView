@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/manzaraImageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/manzaraNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Manzara Name"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@+id/imageDelete"
+            app:layout_constraintStart_toEndOf="@+id/manzaraImageView"
+            app:layout_constraintTop_toTopOf="@+id/manzaraImageView" />
+
+        <TextView
+            android:id="@+id/manzaraDescText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Manzara Description"
+            app:layout_constraintBottom_toBottomOf="@+id/manzaraImageView"
+            app:layout_constraintEnd_toStartOf="@+id/imageCopy"
+            app:layout_constraintStart_toEndOf="@+id/manzaraImageView"
+            app:layout_constraintTop_toBottomOf="@+id/manzaraNameText" />
+
+        <ImageView
+            app:tint="@color/red"
+            android:id="@+id/imageDelete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/manzaraNameText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/manzaraNameText"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <ImageView
+            app:tint="@color/green"
+            android:id="@+id/imageCopy"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/manzaraDescText"
+            app:layout_constraintEnd_toEndOf="@+id/imageDelete"
+            app:layout_constraintTop_toTopOf="@+id/manzaraDescText"
+            app:srcCompat="@drawable/ic_make_copy" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView >
